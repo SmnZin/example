@@ -1,47 +1,50 @@
-# Svelte + Vite
 
-This template should help get you started developing with Svelte in Vite.
+# Proyecto de Svelte: Mapeo Dinámico de Lista de Objetos
 
-## Recommended IDE Setup
+Este proyecto de Svelte muestra cómo mapear dinámicamente una lista de objetos en HTML utilizando JavaScript y la sintaxis de Svelte. En este ejemplo, se proporciona una lista de objetos que representan diferentes monedas junto con sus valores y tasas de cambio.
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## Funcionalidades
 
-## Need an official Svelte framework?
+- Mapeo dinámico de una lista de objetos en HTML.
+- Utilización de estilos CSS para dar formato a la lista de monedas.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Instrucciones de Uso
 
-## Technical considerations
+1. Clona el repositorio en tu máquina local:
 
-**Why use this over SvelteKit?**
+    ```bash
+    git clone https://github.com/SmnZin/example
+    ```
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+2. Instala las dependencias del proyecto:
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+    ```bash
+    cd example
+    npm install
+    ```
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+3. Inicia la aplicación en modo de desarrollo:
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+    ```bash
+    npm run dev
+    ```
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+4. Abre tu navegador web y navega a `http://localhost:5000` para ver la aplicación en acción.
 
-**Why include `.vscode/extensions.json`?**
+## Estructura del Proyecto
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+- `src/main.js`: El punto de entrada de la aplicación donde se inicializa el componente principal.
+- `src/App.svelte`: El componente principal de la aplicación que contiene la lógica para mapear dinámicamente la lista de monedas.
+- `public/index.html`: El archivo HTML principal donde se monta la aplicación.
+- `public/styles.css`: Archivo CSS para dar formato a la aplicación.
 
-**Why enable `checkJs` in the JS template?**
+## Tecnologías Utilizadas
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+- Svelte: Un framework de JavaScript para construir interfaces de usuario reactivas.
+- HTML: Lenguaje de marcado para estructurar la aplicación web.
+- CSS: Lenguaje de estilo para dar formato y diseño a la aplicación.
+- JavaScript: Lenguaje de programación para la lógica de la aplicación.
 
-**Why is HMR not preserving my local component state?**
+## Contribución
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+¡Las contribuciones son bienvenidas! Si encuentras algún problema o tienes alguna sugerencia de mejora, por favor abre un issue o envía un pull request.
